@@ -59,7 +59,7 @@ class TemporalBlock(nn.Module):
         if self.downsample is not None:
             self.downsample.weight.data.normal_(0, 0.01)
 
-    
+
     def forward(self, x):
         out = self.net(x)
         res = x if self.downsample is None else self.downsample(x)
